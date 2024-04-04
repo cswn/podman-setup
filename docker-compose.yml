@@ -1,0 +1,12 @@
+version "3.5":
+services:
+  apache:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: apache
+    ports:
+      - "80:80"
+    volumes:
+      - ./app:/var/www/html/
+    command: /bin/sh -c ""
